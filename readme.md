@@ -25,36 +25,78 @@ ContentGuard AI
     
 *   **Git**
     
+---
 
-### Step 1: Clone the Repository
+## 🚀 Step 1: Clone the Repository
 
-Bash
+```bash
+git clone <your-repo-url>
+cd contentguard-ai
+```
 
-`   git clone   cd contentguard-ai   `
+---
 
-### Step 2: Backend Setup
+## 🛠 Step 2: Backend Setup
 
-1.  Bash
+1. Navigate to the backend folder:
 
+```bash
 cd backend
-    
-2.  Bashnpm install
-    
-3.  Code snippetPORT=5000MONGO\_URI=mongodb+srv://JWT\_SECRET=your\_super\_secret\_key\_123
-    
-4.  Bashnpm run dev**Success:** You should see "Server running on port 5000" & "MongoDB Connected".
-    
+```
 
-### Step 3: Frontend Setup
+2. Install dependencies:
 
-1.  Bashcd ../frontend
-    
-2.  Bashnpm install
-    
-3.  Bashnpm run dev
-    
-4.  Open your browser and visit: http://localhost:5173
-    
+```bash
+npm install
+```
+
+3. Create a `.env` file and add the following environment variables:
+
+```env
+PORT=5000
+MONGO_URI=mongodb+srv://<your-mongo-connection-string>
+JWT_SECRET=your_super_secret_key_123
+```
+
+4. Start the backend server:
+
+```bash
+npm run dev
+```
+
+✅ **Success:** You should see
+**"Server running on port 5000"** and **"MongoDB Connected"**
+
+---
+
+## 🎨 Step 3: Frontend Setup
+
+1. Navigate to the frontend folder:
+
+```bash
+cd ../frontend
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Start the frontend server:
+
+```bash
+npm run dev
+```
+
+4. Open your browser and visit:
+
+```
+http://localhost:5173
+```
+
+---
+
 
 📡 API Documentation
 --------------------
