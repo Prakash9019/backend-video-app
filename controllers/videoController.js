@@ -17,7 +17,7 @@ exports.getVideos = async (req, res) => {
     if (search) query.title = { $regex: search, $options: 'i' }; // Search by title
 
     const videos = await Video.find(query).sort({ uploadDate: -1 });
-    
+ 
     // Performance: Add Cache-Control header (Client-side caching)
     res.set('Cache-Control', 'public, max-age=300'); // Cache for 5 minutes
     res.json(videos);
